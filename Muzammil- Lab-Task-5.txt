@@ -1,0 +1,125 @@
+Task 1:
+#include<iostream>
+using namespace std;
+int main(){
+	int x = 1;
+do {cout << "enter a number: ";
+cin >> x;
+}
+while(x>0);
+
+return 0;
+}
+
+
+Task 2:
+
+#include<iostream>
+#include<math.h>
+using namespace std;
+int main(){
+	double num1,num2, result;
+	char operation,again;
+	do{
+	cout<<"Enter first number :";
+	cin>>num1;
+	cout<<"Enter second number :";
+	cin>>num2;
+	cout<<"Plz choose the operatio(+,-,*,/,%,^) ";
+	cin>>operation;
+switch(operation){
+	case '+':
+		result = num1 + num2;
+		break;
+	case '-':
+	    result = num1 - num2;
+		break;
+	case '*':
+	    result = num1*num2;
+	    break;
+	case '/':
+		 if (num2 == 0) {
+                    cout << "Cannot divide by zero"<<endl;
+                }
+	    result = num1/num2;
+		break;
+	case '%':
+	    result = fmod(num1,num2);
+		break;
+	case '^':
+	    result = pow(num1, num2);
+		break;
+		default: 
+		cout<<"invalid operation";
+			break;
+		}
+		cout<<"Here is your result"<< result<<endl;
+					cout<<"would you like to use the calculator again?\n write y or n";
+					cin>>again;			
+		}while(again=='y' || again=='n');
+		return 0;
+	
+}
+
+Task 3:
+	part-a:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int sum = 0;
+  int i = 2;
+
+  while (i <= 100) {
+    if (i % 2 == 0) {
+      sum += i;
+    }
+
+    i++;
+  }
+
+  cout << "The sum of all even numbers between 2 and 100 is: " << sum << endl;
+
+  return 0;
+}
+part-b:
+#include <iostream>
+using namespace std;
+
+int main() {
+  int sum = 0;
+  int i = 1;
+
+  do {
+    sum += i * i;
+    i++;
+  } while (i <= 100);
+
+  cout << "The sum of all squares between 1 and 100 is: " << sum << endl;
+
+  return 0;
+}
+
+Task 4 :
+#include <iostream>
+using namespace std;
+int main() {
+  int a,b,sum = 0;
+
+  cout<<"Enter the starting number: ";
+  cin>>a;
+
+  cout<<"Enter the ending number: ";
+  cin>>b;
+
+  while (a <= b) {
+    if (a % 2 != 0) {
+      sum += a;
+    }
+    a++;
+  }
+
+  cout<<"The sum of all odd numbers between "<<a<<" and "<<b<<" is "<<sum<<endl;
+
+  return 0;
+}
